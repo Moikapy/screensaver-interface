@@ -1,35 +1,4 @@
-let LANGUAGE = {};
-export const setLanguage = (data) => (LANGUAGE = data);
-export const getLanguage = () => LANGUAGE;
 
-let objktBlockList = [];
-export const setObjktBlockList = (data) => (objktBlockList = data);
-export const getObjktBlockList = () => objktBlockList;
-
-let walletBlockList = [];
-export const setWalletBlockList = (data) => (walletBlockList = data);
-export const getWalletBlockList = () => walletBlockList;
-
-let banBlockList = [];
-export const setBanBlockList = (data) => (banBlockList = data);
-export const getBanBlockList = () => banBlockList;
-
-export const PATH = {
-  FEED: '/',
-  ISSUER: '/tz',
-  COLLAB: '/kt',
-  ABOUT: '/about',
-  FAQ: '/faq',
-  SYNC: '/sync',
-  MINT: '/mint',
-  OBJKT: '/objkt',
-  GALLERY: '/gallery',
-  TAGS: '/tags',
-};
-
-export const MINT_MIN_LIMIT = 1;
-export const MINT_MAX_LIMIT = 10000;
-export const MINT_FILESIZE = 100;
 
 export const MIMETYPE = {
   BMP: 'image/bmp',
@@ -86,20 +55,3 @@ export const ALLOWED_FILETYPES_LABEL = Object.entries(MIMETYPE)
   .map((e) => (e[0] === 'ZIP' ? 'HTML (ZIP ARCHIVE)' : e[0]))
   .join(', ');
 
-export const ALLOWED_COVER_MIMETYPES = [
-  MIMETYPE.JPEG,
-  MIMETYPE.PNG,
-  MIMETYPE.GIF,
-  MIMETYPE.MP4,
-];
-
-export const ALLOWED_COVER_FILETYPES_LABEL = ['jpeg, png, gif'];
-
-export const MAX_EDITIONS = 10000; // Limited by contract
-
-export const MIN_ROYALTIES = 10; // Limited by contract
-
-export const MAX_ROYALTIES = 25; // Limited by contract
-
-export const IPFS_DEFAULT_THUMBNAIL_URI =
-  'ipfs://QmNrhZHUaEqxhyLfqoq1mtHSipkWHeT31LNHb1QEbDHgnc';
